@@ -91,7 +91,13 @@ module.exports.deleteListing = async (req, res) => {
 
 // Search Bar
 module.exports.searchListing = async (req, res) => {
-  const listing = await Listing.findOne({ title: req.body.search });
+  let arr = req.body.search.split(" ");
+  let newArray = [];
+  for (el of arr) {
+    newArray.push(el.charAt(0).toUpperCase() + el.slice(1));
+  }
+  let title = newArray.join(" ");
+  const listing = await Listing.findOne({ title: title });
   const id = listing._id;
   res.redirect(`/listings/${id}`);
 };
