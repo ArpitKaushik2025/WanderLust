@@ -88,3 +88,10 @@ module.exports.deleteListing = async (req, res) => {
   req.flash("error", "Listing Deleted!");
   res.redirect("/listings");
 };
+
+// Search Bar
+module.exports.searchListing = async (req, res) => {
+  const listing = await Listing.findOne({ title: req.body.search });
+  const id = listing._id;
+  res.redirect(`/listings/${id}`);
+};
