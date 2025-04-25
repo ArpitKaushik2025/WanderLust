@@ -21,6 +21,7 @@ const User = require("./models/user.js");
 const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/reviews.js");
 const userRouter = require("./routes/user.js");
+const filtersRouter = require("./routes/filters.js");
 const { error } = require("console");
 
 // DB Connection URL
@@ -102,6 +103,7 @@ app.use((req, res, next) => {
 });
 
 // Using Routes
+app.use("/listings", filtersRouter);
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
