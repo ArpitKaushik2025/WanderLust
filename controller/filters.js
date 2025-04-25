@@ -1,5 +1,4 @@
 const Listing = require("../models/listing.js");
-const { all } = require("../routes/listing.js");
 const ExpressError = require("../utils/ExpressError.js");
 
 module.exports.trending = async (req, res) => {
