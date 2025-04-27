@@ -1,12 +1,12 @@
 const Listing = require("../models/listing.js");
-const ExpressError = require("../utils/ExpressError.js");
 
 module.exports.trending = async (req, res) => {
   const allListings = await Listing.find({ category: "Trending" });
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.rendirect("/listings");
   }
 };
 
@@ -15,7 +15,8 @@ module.exports.rooms = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -24,7 +25,8 @@ module.exports.city = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -33,7 +35,8 @@ module.exports.mountains = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -42,7 +45,8 @@ module.exports.castles = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -51,7 +55,8 @@ module.exports.pools = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -60,7 +65,8 @@ module.exports.camping = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -69,7 +75,8 @@ module.exports.farms = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -78,7 +85,8 @@ module.exports.beach = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -87,7 +95,8 @@ module.exports.arctic = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
 
@@ -96,6 +105,7 @@ module.exports.boats = async (req, res) => {
   if (allListings.length != 0) {
     res.render("./listings/index.ejs", { allListings });
   } else {
-    throw new ExpressError(204, "No Listings Exist in this Criteria");
+    req.flash("error", "No Listing are there in this criteria.");
+    res.redirect("/listings");
   }
 };
