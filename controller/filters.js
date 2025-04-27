@@ -6,7 +6,7 @@ module.exports.trending = async (req, res) => {
     res.render("./listings/index.ejs", { allListings });
   } else {
     req.flash("error", "No Listing are there in this criteria.");
-    res.rendirect("/listings");
+    res.redirect("/listings");
   }
 };
 
