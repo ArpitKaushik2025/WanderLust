@@ -29,8 +29,8 @@ btn.addEventListener("click", () => {
   body.style.overflow = "hidden";
 });
 
-for (btn of alertBtns) {
-  btn.addEventListener("click", () => {
+for (eachBtn of alertBtns) {
+  eachBtn.addEventListener("click", () => {
     alert.style.display = "none";
     body.style.overflow = "auto";
   });
