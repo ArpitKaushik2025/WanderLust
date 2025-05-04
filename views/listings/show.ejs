@@ -28,10 +28,20 @@
       >Edit</a
     >
   </div>
+  <div class="alert-danger">
+    <p class="mt-3">Are you sure you want to delete?</p>
+    <br />
+    <div class="alert-buttons mb-3">
+      <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+        <button class="btn btn-outline-success btn-alert">Yes</button>
+      </form>
+      <form method="GET" action="/listings/<%= listing._id %>">
+        <button class="btn btn-outline-danger btn-alert">No</button>
+      </form>
+    </div>
+  </div>
   <div class="offset-5">
-    <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
-      <button class="btn btn-dark">Delete</button>
-    </form>
+    <button class="btn btn-dark btn-del">Delete</button>
   </div>
 </div>
 <% } %> <% if(currUser) { %>
@@ -124,4 +134,4 @@
   data-listing="<%= JSON.stringify(listing) %>"
   data-map="<%= JSON.stringify(process.env.MAP_TOKEN) %>"
 ></div>
-<script src="/js/map.js"></script>
+<script src="/js/showScript.js"></script>

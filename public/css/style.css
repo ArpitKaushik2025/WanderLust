@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: auto;
 }
 
 .container {
@@ -159,4 +160,28 @@ body {
 #map {
   height: 400px;
   width: 100vh;
+}
+
+/* Alert */
+.alert-danger {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  width: 18rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  position: fixed;
+  top: 20rem;
+  left: 38rem;
+  z-index: 2;
+  display: none;
+}
+
+.alert-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-alert {
+  width: 4rem;
 }
