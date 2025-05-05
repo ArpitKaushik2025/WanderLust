@@ -1,10 +1,6 @@
 const data = document.getElementById("my-data");
 const listing = JSON.parse(data.dataset.listing);
 const mapToken = JSON.parse(data.dataset.map);
-const btn = document.querySelector(".btn-del");
-const alert = document.querySelector(".alert-danger");
-const alertBtns = document.querySelectorAll(".btn-alert");
-const body = document.querySelector("body");
 
 // Map
 mapboxgl.accessToken = mapToken;
@@ -22,16 +18,3 @@ const marker = new mapboxgl.Marker({ color: "red" })
     )
   )
   .addTo(map);
-
-// Delete Popup
-btn.addEventListener("click", () => {
-  alert.style.display = "inline";
-  body.style.overflow = "hidden";
-});
-
-for (eachBtn of alertBtns) {
-  eachBtn.addEventListener("click", () => {
-    alert.style.display = "none";
-    body.style.overflow = "auto";
-  });
-}

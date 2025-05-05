@@ -41,7 +41,7 @@
     </div>
   </div>
   <div class="offset-5">
-    <button class="btn btn-dark btn-del">Delete</button>
+    <button class="btn btn-dark btn-popup">Delete</button>
   </div>
 </div>
 <% } %> <% if(currUser) { %>
@@ -134,4 +134,5 @@
   data-listing="<%= JSON.stringify(listing) %>"
   data-map="<%= JSON.stringify(process.env.MAP_TOKEN) %>"
 ></div>
-<script src="/js/showScript.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/popup.js"></script>
