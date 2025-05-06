@@ -164,7 +164,7 @@ body {
 }
 
 /* Alert */
-.alert-danger {
+.popup-danger {
   display: flex;
   flex-direction: column;
   background-color: beige;

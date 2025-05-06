@@ -1,5 +1,5 @@
 const btn = document.querySelector(".btn-popup");
-const alert = document.querySelector(".alert-danger");
+const alert = document.querySelector(".popup-danger");
 const alertBtns = document.querySelectorAll(".btn-alert");
 const body = document.querySelector("body");
 
