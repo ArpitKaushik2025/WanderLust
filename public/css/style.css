@@ -163,8 +163,9 @@ body {
   width: 100vh;
 }
 
-/* Alert */
-.popup-danger {
+/* Alert Delete */
+.popup-delete,
+.popup-logout {
   display: flex;
   flex-direction: column;
   background-color: beige;
@@ -183,6 +184,7 @@ body {
   justify-content: space-evenly;
 }
 
-.btn-alert {
+.btn-del,
+.btn-logout {
   width: 4rem;
 }

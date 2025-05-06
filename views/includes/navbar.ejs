@@ -36,22 +36,22 @@
         <% if (!currUser) { %>
         <a class="nav-link" href="/login"><b>Log In</b></a>
         <% } %> <% if (currUser) { %>
-        <a class="nav-link btn-popup"><b>Log Out</b></a>
+        <a class="nav-link btn-popup-logout"><b>Log Out</b></a>
         <% } %>
       </div>
     </div>
   </div>
 </nav>
-<div class="popup-danger">
-  <p class="mt-3">Are you sure you want to delete?</p>
+<div class="popup-logout">
+  <p class="mt-3">Are you sure you want to logout?</p>
   <br />
   <div class="alert-buttons mb-3">
     <form method="GET" action="/logout">
-      <button class="btn btn-outline-success btn-alert">Yes</button>
+      <button class="btn btn-outline-success btn-logout">Yes</button>
     </form>
     <form method="GET" action="/listings">
-      <button class="btn btn-outline-danger btn-alert">No</button>
+      <button class="btn btn-outline-danger btn-logout">No</button>
     </form>
   </div>
 </div>
-<script src="./js/popup.js"></script>
+<script src="/js/popup.js"></script>
