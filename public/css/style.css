@@ -27,10 +27,17 @@ body {
 }
 
 /* Filter */
-#filters {
+.filter-tax {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+#filters {
+  display: flex;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 #filters a {
@@ -172,9 +179,9 @@ body {
   width: 18rem;
   padding: 1rem;
   border-radius: 2rem;
-  position: fixed;
+  position: absolute;
   top: 20rem;
-  left: 38rem;
+  left: 40%;
   z-index: 2;
   display: none;
 }
@@ -187,4 +194,58 @@ body {
 .btn-del,
 .btn-logout {
   width: 4rem;
+}
+
+/* Media Query for Filters and Tax */
+@media (max-width: 1200px) {
+  .filter-tax {
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #filters {
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+  .tax-toggle {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .filter-tax {
+    margin: 1rem;
+    flex-wrap: nowrap;
+  }
+  #filters {
+    width: 60%;
+    margin-right: 10rem;
+  }
+  .tax-toggle {
+    margin-left: 0;
+    flex-grow: 1;
+  }
+}
+
+/* Popup Responsive */
+@media (max-width: 485px) {
+  .popup-delete,
+  .popup-logout {
+    left: 10%;
+  }
+}
+
+@media (min-width: 485px) and (max-width: 576px) {
+  .popup-delete,
+  .popup-logout {
+    left: 20%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 950px) {
+  .popup-delete,
+  .popup-logout {
+    left: 30%;
+  }
 }

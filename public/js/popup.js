@@ -24,9 +24,14 @@ if (window.myData != null) {
   const logoutBtn = document.querySelector(".btn-popup-logout");
   const logoutAlert = document.querySelector(".popup-logout");
   const logoutAlertBtns = document.querySelectorAll(".btn-logout");
+  const closeBtn = document.querySelector(".btn-close");
   const body = document.querySelector("body");
 
   logoutBtn.addEventListener("click", () => {
+    console.log(closeBtn);
+    if (closeBtn) {
+      closeBtn.click();
+    }
     logoutAlert.style.display = "inline";
     body.style.overflow = "hidden";
   });
