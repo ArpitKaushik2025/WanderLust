@@ -240,6 +240,10 @@ body {
   }
   .d-flex {
     margin-left: 0;
+    width: 70%;
+  }
+  .navbar-brand {
+    display: none;
   }
 }
 
@@ -260,13 +264,5 @@ body {
   }
   .d-flex {
     margin-left: 0;
-  }
-}
-
-@media (max-width: 450px) {
-  .d-flex {
-    position: absolute;
-    top: 5rem;
-    left: 3%;
   }
 }
