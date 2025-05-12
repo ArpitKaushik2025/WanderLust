@@ -232,7 +232,7 @@ body {
   }
 }
 
-/* Popup Responsive */
+/* Popup & Search Bar Responsive */
 @media (max-width: 485px) {
   .popup-delete,
   .popup-logout {
@@ -260,5 +260,13 @@ body {
   }
   .d-flex {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .d-flex {
+    position: absolute;
+    top: 5rem;
+    left: 3%;
   }
 }
