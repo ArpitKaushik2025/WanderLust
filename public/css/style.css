@@ -26,6 +26,10 @@ body {
   cursor: pointer;
 }
 
+.d-flex {
+  margin-left: 35%;
+}
+
 /* Filter */
 .filter-tax {
   display: flex;
@@ -234,6 +238,9 @@ body {
   .popup-logout {
     left: 10%;
   }
+  .d-flex {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 485px) and (max-width: 576px) {
@@ -241,11 +248,17 @@ body {
   .popup-logout {
     left: 20%;
   }
+  .d-flex {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 950px) {
   .popup-delete,
   .popup-logout {
     left: 30%;
+  }
+  .d-flex {
+    margin-left: 0;
   }
 }

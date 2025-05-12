@@ -3,6 +3,16 @@
     <a class="navbar-brand" href="/listings"
       ><i class="fa-regular fa-compass"></i
     ></a>
+    <form class="d-flex" role="search" method="POST" action="/listings/search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        name="search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
     <button
       class="navbar-toggler"
       type="button"
@@ -35,7 +45,7 @@
               >Explore</a
             >
           </li>
-          <li class="nav-item me-auto">
+          <li class="nav-item">
             <a class="nav-link" href="/listings/new">Airbnb your home</a>
           </li>
           <% if (!currUser) { %>
@@ -52,22 +62,6 @@
           </li>
           <% } %>
         </ul>
-        <hr />
-        <form
-          class="d-flex"
-          role="search"
-          method="POST"
-          action="/listings/search"
-        >
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            name="search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </div>
